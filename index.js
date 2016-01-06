@@ -590,7 +590,7 @@ SendStream.prototype.send = function(path, stat){
   // set read options
   opts.start = offset
   opts.end = Math.max(offset, offset + len - 1)
-
+  opts.encoding = 'binary'
   // content-length
   res.setHeader('Content-Length', len);
 
